@@ -1,5 +1,5 @@
 applications:
-- name: tracker-backlog-batch3
+- name: tracker-backlog
   path: ./applications/backlog-server/build/libs/backlog-server.jar
   routes:
   - route: backlog-pal-neha-srinivas.apps.dev.pcf-aws.com

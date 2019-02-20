@@ -1,5 +1,5 @@
 applications:
-- name: tracker-registration-batch3
+- name: tracker-registration
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
   - route: registration-pal-neha-srinivas.apps.dev.pcf-aws.com

@@ -1,5 +1,5 @@
 applications:
-- name: tracker-timesheets-batch3
+- name: tracker-timesheets
   path: ./applications/timesheets-server/build/libs/timesheets-server.jar
   routes:
   - route: timesheets-pal-neha-srinivas.apps.dev.pcf-aws.com
