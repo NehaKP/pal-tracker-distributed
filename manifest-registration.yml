@@ -3,7 +3,8 @@ applications:
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
   - route: registration-pal-neha-srinivas.apps.dev.pcf-aws.com
-  memory: 1G
+  memory: 800M
+  disk_quota: 800M
   instances: 1
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
