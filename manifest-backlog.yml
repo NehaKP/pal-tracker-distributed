@@ -8,7 +8,7 @@ applications:
   instances: 1
   buildpack: java_buildpack_offline
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-neha-srinivas.apps.dev.pcf-aws.com
+    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-neha-srinivas.apps.dev.pcf-aws.com
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-backlog-database
