@@ -1,5 +1,5 @@
 applications:
-- name: tracker-registration
+- name: tracker-registration-batch3
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
   - route: registration-pal-neha-srinivas.apps.dev.pcf-aws.com
@@ -11,3 +11,4 @@ applications:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-registration-database
+  - tracker-service-registry3
