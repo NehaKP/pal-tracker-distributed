@@ -16,8 +16,8 @@ public class ProjectClient {
     private final String endpoint;
 
     public ProjectClient(RestOperations restOperations, String registrationServerEndpoint) {
-        this.restOperations= restOperations;
-        this.endpoint  = registrationServerEndpoint;
+        this.restOperations = restOperations;
+        this.endpoint = registrationServerEndpoint;
     }
 
     @HystrixCommand(fallbackMethod = "getProjectFromCache")
@@ -28,6 +28,7 @@ public class ProjectClient {
 
         return project;
     }
+
     public ProjectInfo getProjectFromCache(long projectId) {
         logger.info("Getting project with id {} from cache", projectId);
         return projectsCache.get(projectId);
