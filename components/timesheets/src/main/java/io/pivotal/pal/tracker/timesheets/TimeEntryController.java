@@ -1,5 +1,6 @@
 package io.pivotal.pal.tracker.timesheets;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.pivotal.pal.tracker.timesheets.data.TimeEntryDataGateway;
 import io.pivotal.pal.tracker.timesheets.data.TimeEntryFields;
 import io.pivotal.pal.tracker.timesheets.data.TimeEntryRecord;
@@ -37,6 +38,7 @@ public class TimeEntryController {
     }
 
     @GetMapping
+    @HystrixCommand(fallbackMethod = "getProjectFromCache")
     public List<TimeEntryInfo> list(@RequestParam long userId) {
         return gateway.findAllByUserId(userId).stream()
             .map(this::present)
